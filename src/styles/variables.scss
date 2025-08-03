@@ -1,0 +1,62 @@
+:root {
+  --color-light: #f9f9f9;
+  --color-light-2: #E9EEF5; // main-bg-page
+  --color-black: #111;
+  --color-blue-gray: #D8E2EC; // bg-section
+  --color-blue-gray-second: #DEE5EF; // border-color
+  --color-gray: #F1F1F1;
+  --color-blue: #1A4FE8;
+  --color-dark: #20242F;
+  --color-accent: #6B98F0;
+  --color-second: #C3D0E2;
+  --color-green: #21AF64;
+
+  --color-hover: var(--color-blue);
+  --color-active: rgba(26, 79, 232, 80%);
+
+  --color-telegtam-1: #517DA2;
+  --color-telegtam-2: #50A7EA;
+  --color-telegtam-3: #0070FF;
+
+  --border-one: var(--border-width-s) solid var(--color-blue-gray-second);
+
+  --border-second: var(--border-width-m) solid var(--color-accent);
+  --border-accent: var(--border-width-m) solid var(--color-accent);
+
+  --border-width-s: 1px;
+  --border-width-m: 2px;
+
+  --border-radius-s: 5px;
+  --border-radius-m: 10px;
+  --border-radius-l: 20px;
+
+  --font-family-base: "Roboto", sans-serif;
+  --font-famity-second: "Inter", sans-serif;
+
+  --container-width: #{fluid-to-laptop(
+      $container-desktop-width,
+      $container-laptop-width
+    )};
+  --container-padding-x: 16px;
+
+  --section-padding-y: #{fluid(30, 15)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}
+
+
+[data-theme="dark"] {
+  --color-light: #121212;
+  --color-light-2: #1e1e1e; /* main-bg-page dark */
+  --color-black: #f9f9f9;
+  --color-blue-gray: #2b2f36; /* bg-section dark */
+  --color-gray: #2a2a2a;
+  --color-blue: #3f74f4;
+  --color-dark: #eaeaea;
+  --color-accent: #8aaeff;
+  --color-second: #4c5869;
+
+  --color-hover: var(--color-blue);
+  --color-active: rgba(63, 116, 244, 0.8);
+}

@@ -1,0 +1,49 @@
+.button {
+  --padding-buttom-y: #{fluid(15, 12)};
+  --padding-buttom-x: #{fluid(16, 14)};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    color: var(--color-blue-gray);
+  }
+
+  &:active {
+    background-color: var(--color-light-2);
+  }
+
+  &:disabled {
+    opacity: 65%;
+  }
+
+  &--accent {
+    background-color: var(--color-blue-gray-second);
+  }
+
+  &--with-dot {
+    position: relative;
+
+    span {
+      margin-left: 18px;
+    }
+
+    &::before {
+      @include square(10);
+
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      background-color: var(--color-green);
+    }
+  }
+
+  @include hover {
+    &::before {
+      box-shadow: inset 0 0 0 1px var(--color-blue);
+    }
+  }
+}
