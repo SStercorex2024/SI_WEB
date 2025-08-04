@@ -5,6 +5,7 @@
   --color-blue-gray: #D8E2EC; // bg-section
   --color-blue-gray-second: #DEE5EF; // border-color
   --color-gray: #F1F1F1;
+  --color-gray-2: #798695;
   --color-blue: #1A4FE8;
   --color-dark: #20242F;
   --color-accent: #6B98F0;
@@ -22,13 +23,16 @@
 
   --border-second: var(--border-width-m) solid var(--color-accent);
   --border-accent: var(--border-width-m) solid var(--color-accent);
+  --border-gray: var(--border-width-s) solid var(--color-gray);
 
   --border-width-s: 1px;
   --border-width-m: 2px;
 
+  --border-radius-xs: 3px;
   --border-radius-s: 5px;
   --border-radius-m: 10px;
   --border-radius-l: 20px;
+  --border-radius-xl: 30px;
 
   --font-family-base: "Roboto", sans-serif;
   --font-famity-second: "Inter", sans-serif;
@@ -37,12 +41,20 @@
       $container-desktop-width,
       $container-laptop-width
     )};
+
+  --container-extra-width: #{fluid-to-laptop(
+      $container-extra-desktop-width,
+      $container-laptop-width
+    )};
   --container-padding-x: 16px;
 
   --section-padding-y: #{fluid(30, 15)};
 
   --transition-duration: 0.2s;
   --transition-duration-longer: 0.4s;
+
+  --z-index-burger-menu: 1000;
+  --z-index-shadow-body: 999;
 }
 
 

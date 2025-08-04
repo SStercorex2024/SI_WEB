@@ -1,0 +1,256 @@
+.header {
+  padding-bottom: var(--section-padding-y);
+
+  .container-extra--header {
+    background-color: var(--color-light);
+    border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+
+    &.is-active {
+      max-width: 300px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      z-index: var(--z-index-burger-menu);
+
+      @include mobile-s {
+        width: 100%;
+      }
+
+      .header__content {
+        row-gap: 25px;
+        flex-direction: column;
+        align-items: start;
+        border-radius: 30px 0 0 30px;
+
+      }
+
+      .header__list {
+        display: flex;
+        width: 100%;
+      }
+
+      .header__button {
+        @include tablet {
+          padding-bottom: 10px;
+          border-bottom: var(--border-gray);
+          margin-bottom: -10px;
+          width: 100%;
+        }
+      }
+
+      .header__buttons {
+        @include tablet {
+          width: 100%;
+          flex-direction: column;
+          row-gap: 20px;
+        }
+      }
+
+      .header__buttons-sublist {
+        width: 100%;
+      }
+
+      .header__buttons {
+        display: flex;
+      }
+
+      .burger-button {
+        top: 8%;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: fluid(76, 10);
+    padding-block: fluid-to-laptop(20, 32);
+
+    @include laptop {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include tablet {
+      justify-content: space-around;
+      flex-wrap: nowrap;
+    }
+
+    @include mobile {
+      padding-block: 20px;
+    }
+  }
+
+  &__logo-wrapper {
+    @include laptop {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: fluid-to-laptop(30, 10);
+
+    @include tablet {
+      display: none;
+      flex-direction: column-reverse;
+      align-items: start;
+      row-gap: fluid(30, 25);
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    transition-duration: var(--transition-duration);
+
+    &--sublist {
+      position: relative;
+
+      @include tablet {
+        padding-bottom: 10px;
+        border-bottom: var(--border-gray);
+        width: 100%;
+      }
+
+      .header__list-link {
+        width: 100%;
+        justify-content: space-evenly;
+      }
+
+      &.is-active {
+        flex-direction: column;
+        align-items: baseline;
+        display: flex;
+
+        .header__list-link {
+          color: var(--color-blue);
+        }
+
+        .header__list-icon {
+          rotate: 180deg;
+        }
+
+        .header__sublist {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__list-link {
+    text-align: left;
+    font-family: var(--font-famity-second);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-inline: 0;
+
+    @include hover {
+      color: var(--color-hover);
+    }
+
+    .header__list-icon {
+      transition-duration: var(--transition-duration);
+      margin-left: auto;
+    }
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__sublist {
+    display: none;
+    flex-direction: column;
+    row-gap: 25px;
+    font-family: var(--font-famity-second);
+    font-size: 18px;
+  }
+
+  &__buttons {
+    position: relative;
+    display: flex;
+    column-gap: fluid-to-laptop(10, 4);
+
+    @include tablet {
+      margin-right: fluid-to-laptop(55, 45);
+    }
+
+    @include mobile-s {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    @include hover {
+      color: var(--color-hover);
+    }
+  }
+
+  &__buttons-sublist {
+    position: relative;
+    display: flex;
+
+    @include tablet-above {
+      width: 63px;
+    }
+  }
+
+  &__button-sublist {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: var(--transition-duration);
+    box-sizing: border-box;
+
+    &.is-active {
+      max-height: fit-content;
+      opacity: 1;
+      padding: 15px;
+    }
+  }
+
+  &__list-icon,
+  &__button-icon {
+    @include square(24px)
+  }
+
+  .burger-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+  }
+}

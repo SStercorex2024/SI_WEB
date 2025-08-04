@@ -2,18 +2,25 @@ import "@/styles"
 import { Head } from "minista"
 import Header from "@/layouts/Header"
 import Content from "@/layouts/Content"
-import Footer from "@/layouts/Footer"
+// import Footer from "@/layouts/Footer"
+import en from "@/locales/en"
+import uk from "@/locales/uk"
 
 export default function (props) {
   const { children, title, metadata } = props
 
+  const translations = {
+    en,
+    uk,
+  }
   const lang = metadata?.lang || "en"
 
+  const t = translations[lang]
   const og = metadata?.og || {}
 
   return (
     <>
-      <Head htmlAttributes={{ lang: "en" }}>
+      <Head htmlAttributes={{ lang }}>
         <title>CI WEB | {title}</title>
         <meta name="description" content={og.description || ""} />
         <meta property="og:title" content={og.title || title} />
@@ -41,9 +48,10 @@ export default function (props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Header />
+
+      <Header t={t.header} />
       <Content>{children}</Content>
-      <Footer />
+      {/*<Footer t={t.footer} />*/}
     </>
   )
 }
