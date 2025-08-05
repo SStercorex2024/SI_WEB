@@ -9,9 +9,19 @@ import Icon from "@/components/Icon"
 const Header = ({ t }) => {
   return (
     <header className="header">
-      <div className="container-extra container-extra--header">
+      <div
+        className="container-extra container-extra--header"
+        data-js-sublist=""
+        data-js-burger-menu=""
+      >
         <div className="header__content">
-          <Logo className="header__logo-wrapper" />
+          <div className="header__logo-wrapper">
+            <Logo />
+            <BurgerButton
+              className="header__burger-button"
+              extraAttrs={{ ...{ "data-js-burger-button": "" } }}
+            />
+          </div>
           <nav className="header__nav">
             <ul className="header__list">
               {t.navList.map((item, index) => {
@@ -25,7 +35,11 @@ const Header = ({ t }) => {
                   >
                     {isWithSublist ? (
                       <>
-                        <button className="header__list-link" type="button">
+                        <button
+                          className="header__list-link"
+                          type="button"
+                          data-js-sublist-button=""
+                        >
                           <span>{item}</span>
                           <Icon
                             className="header__list-icon"
@@ -34,7 +48,10 @@ const Header = ({ t }) => {
                           />
                         </button>
                         {t.navSubList && (
-                          <ul className="header__sublist">
+                          <ul
+                            className="header__sublist"
+                            data-js-sublist-list=""
+                          >
                             {t.navSubList.map((subItem, subIndex) => (
                               <li
                                 className="header__sublist-item"
@@ -65,7 +82,7 @@ const Header = ({ t }) => {
             </ul>
           </nav>
           <div className="header__buttons">
-            <div className="header__buttons-sublist">
+            <div className="header__buttons-sublist" data-js-sublist-button="">
               <button
                 className="header__button"
                 aria-label={t.extra.label}
@@ -78,7 +95,7 @@ const Header = ({ t }) => {
                 />
                 <span className="header__button-label">{t.extra.label}</span>
               </button>
-              <ul className="header__button-sublist">
+              <ul className="header__button-sublist" data-js-sublist-list="">
                 <li>
                   <a href={t.extra.id} className="header__button-sublink">
                     {t.extra.label}
@@ -98,7 +115,6 @@ const Header = ({ t }) => {
               mode="with-dot"
             />
           </div>
-          <BurgerButton />
         </div>
       </div>
     </header>

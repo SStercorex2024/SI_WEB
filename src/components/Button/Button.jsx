@@ -9,7 +9,7 @@ const Button = (props) => {
     href,
     target,
     /**
-     *  '' default | 'accent' | 'with-dot'
+     *  '' default | 'accent' | 'with-dot' | 'blue'
      */
     mode = "",
     label,

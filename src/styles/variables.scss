@@ -15,6 +15,10 @@
   --color-hover: var(--color-blue);
   --color-active: rgba(26, 79, 232, 80%);
 
+  --color-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --color-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.10);
+  --color-bg-banner: linear-gradient(180deg, #C1CEE1 0%, #D9E3ED 100%);
+
   --color-telegtam-1: #517DA2;
   --color-telegtam-2: #50A7EA;
   --color-telegtam-3: #0070FF;
@@ -53,22 +57,30 @@
   --transition-duration: 0.2s;
   --transition-duration-longer: 0.4s;
 
+  --z-index-banner-accent-button: 10;
+  --z-index-banner-blue-button: 20;
+
   --z-index-burger-menu: 1000;
   --z-index-shadow-body: 999;
 }
 
-
-[data-theme="dark"] {
-  --color-light: #121212;
-  --color-light-2: #1e1e1e; /* main-bg-page dark */
+.theme-dark {
+  --color-light: #1a1a1a;
+  --color-light-2: #222831; // main-bg-page
   --color-black: #f9f9f9;
-  --color-blue-gray: #2b2f36; /* bg-section dark */
-  --color-gray: #2a2a2a;
-  --color-blue: #3f74f4;
-  --color-dark: #eaeaea;
-  --color-accent: #8aaeff;
-  --color-second: #4c5869;
+  --color-blue-gray: #2c3440; // bg-section
+  --color-blue-gray-second: #3c4754; // border-color
+  --color-gray: #333840;
+  --color-gray-2: #9ca8b6;
+  --color-blue: #3b6ef7;
+  --color-dark: #f1f1f1;
+  --color-accent: #8aa9f5;
+  --color-second: #4b5b6f;
+  --color-green: #35d88a;
 
   --color-hover: var(--color-blue);
-  --color-active: rgba(63, 116, 244, 0.8);
+  --color-active: rgba(59, 110, 247, 0.8);
+
+  --color-shadow: 0 3px 12px 0 rgba(255, 255, 255, 0.15);
+  --color-bg-banner: linear-gradient(180deg, #2e3b4d 0%, #3c4754 100%);
 }

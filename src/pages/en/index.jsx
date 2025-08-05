@@ -1,3 +1,5 @@
+import useTranslation from "@/hooks/useTranslation"
+
 export const metadata = {
   title: "We create all kinds of bots",
   lang: "en",
@@ -9,11 +11,12 @@ export const metadata = {
   },
 }
 
-export default function () {
+export default function EnPage() {
+  const { t } = useTranslation("en")
   return (
     <section>
-      <h1>We create all kinds of bots</h1>
-      <p>FOR YOUR BUSINESS</p>
+      <h1>{t.header.title}</h1>
+      <p>{t.banner.subtitle}</p>
     </section>
   )
 }

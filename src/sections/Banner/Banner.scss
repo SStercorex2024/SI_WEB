@@ -1,0 +1,96 @@
+.banner {
+  --marginTopCards: 86px;
+
+  padding-block: var(--section-padding-y) calc(var(--section-padding-y) + 86);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-banner);
+    border-radius: var(--border-radius-xl);
+
+
+    @include tablet {
+      row-gap: fluid(40, 30);
+    }
+  }
+
+  &__header {
+    padding-top: fluid(80, 40);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: var(--transition-duration-longer);
+
+    @include tablet-above {
+      row-gap: 40px;
+    }
+
+    @include tablet {
+      padding-inline: 10px;
+      row-gap: 15px;
+    }
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__header-date {
+    font-family: var(--font-famity-second);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-gray-2);
+    text-align: center;
+  }
+
+  &__header-title {
+    font-family: var(--font-famity-second);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+
+    @include tablet {
+      font-size: 39px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
+
+    strong {
+      @include fluid-text(80, 45);
+      color: var(--color-blue);
+      text-transform: uppercase;
+    }
+  }
+
+
+  &__cards {
+    display: flex;
+    column-gap: 15px;
+    padding-inline: 10px;
+    align-items: stretch;
+
+    @include tablet-above {
+      margin-top: var(--marginTopCards);
+      justify-content: center;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 15px;
+      width: 100%;
+    }
+  }
+
+  .container-extra--banner {
+    @include tablet-above {
+      padding-inline: 0;
+    }
+  }
+}
