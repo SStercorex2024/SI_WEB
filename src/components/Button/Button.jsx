@@ -16,6 +16,7 @@ const Button = (props) => {
     isLabelHidden = false,
     iconName,
     hasFillIcon,
+    extraAttrs,
   } = props
 
   const isLink = href !== undefined
@@ -36,6 +37,7 @@ const Button = (props) => {
       title={title}
       aria-label={title}
       {...specificProps}
+      {...extraAttrs}
     >
       {IconComponent}
       {!isLabelHidden && <span className="button__label">{label}</span>}

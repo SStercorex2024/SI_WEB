@@ -4,8 +4,7 @@ import uk from "@/locales/uk"
 const translations = { en, uk }
 
 const useTranslation = (lang = "en") => {
-  const t = translations[lang] || translations["en"]
-  return { t, lang }
+  return translations[lang] || translations["en"]
 }
 
 export default useTranslation

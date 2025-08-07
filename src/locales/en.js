@@ -48,4 +48,42 @@ export default {
       },
     ],
   },
+  implementation: {
+    titleHidden: "Bot Implementation",
+    title: "Implementation Areas",
+    items: [
+      {
+        card: {
+          title: "Medical Organizations",
+          desc: "Chatbots are becoming an integral part of business processes in medical organizations. They represent a modern service for interaction between the enterprise’s information infrastructure (CRM, databases, server) and patients through familiar messaging platforms. Such services do not completely replace the organization's website but rather provide quick and easy access to the services and information of the medical organization.",
+          our: "Our Work",
+        },
+        phone: ["1", "2", "3", "4", "5", "6", "1", "2", "3"],
+      },
+      {
+        card: {
+          title: "Telecommunications Companies",
+          desc: "Chatbots in telecommunications companies — which provide communication services, internet access, and television — are essential for organizing technical support and granting customers access to their personal data.With such chatbots, clients can not only contact tech support, but also check their balance and pay for services.",
+          our: "Our Work",
+        },
+        phone: ["7", "8", "9", "7", "8", "9", "7", "8", "9"],
+      },
+      {
+        card: {
+          title: "HR Bot for Your Company",
+          desc: "HR chatbots in large companies provide quick access to current job openings and streamline communication between the HR department and job seekers.They allow candidates to easily find information about open positions, fill out applications directly within the messenger, and get answers to their questions in real time.These tools not only speed up the hiring process, but also make it more convenient and accessible for everyone involved.",
+          our: "Our Work",
+        },
+        phone: ["10", "11", "12", "10", "11", "12", "10", "11", "12"],
+      },
+      {
+        card: {
+          title: "Chatbot for Ticket Sales in Cultural and Recreational Venues",
+          desc: "With our chatbot, you can significantly simplify the ticket purchasing process for museums, amusement parks, attractions, and other cultural or leisure venues.Place a QR code at the entrance, and your visitors will be able to buy tickets quickly in just a few clicks.This convenient solution eliminates the need to wait in line at the ticket office or go to a website to complete the payment.",
+          our: "Our Work",
+        },
+        phone: ["10", "11", "12", "10", "11", "12", "10", "11", "12"],
+      },
+    ],
+  },
 }

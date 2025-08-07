@@ -15,6 +15,15 @@ const Header = ({ t }) => {
         data-js-burger-menu=""
       >
         <div className="header__content">
+          <div className="header__lang-switch">
+            <a href="/" className="header__lang-link">
+              EN
+            </a>
+            <a href="/uk" className="header__lang-link">
+              UK
+            </a>
+          </div>
+
           <div className="header__logo-wrapper">
             <Logo />
             <BurgerButton
