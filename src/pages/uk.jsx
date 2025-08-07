@@ -1,3 +1,6 @@
+import Banner from "@/sections/Banner"
+import useTranslation from "@/hooks/useTranslation"
+
 export const metadata = {
   title: "Ми створюємо найрізноманітніших ботів",
   lang: "uk",
@@ -9,11 +12,9 @@ export const metadata = {
   },
 }
 
-export default function () {
-  return (
-    <section>
-      <h1>Ми створюємо найрізноманітніших ботів</h1>
-      <p>ДЛЯ ВАШОГО БІЗНЕСУ</p>
-    </section>
-  )
+export default function UkPage({ params }) {
+  const lang = params?.lang || metadata.lang || "uk"
+  const t = useTranslation(lang)
+
+  return <Banner t={t.banner} />
 }
