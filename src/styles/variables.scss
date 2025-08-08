@@ -11,6 +11,8 @@
   --color-accent: #6B98F0;
   --color-second: #C3D0E2;
   --color-green: #21AF64;
+  --color-orange: #FF6600;
+  --color-green-bg: #EFFEDD;
 
   --color-hover: var(--color-blue);
   --color-active: rgba(26, 79, 232, 80%);
@@ -46,6 +48,9 @@
       $container-laptop-width
     )};
 
+  --container-width-plus: 1408px;
+
+
   --container-extra-width: #{fluid-to-laptop(
       $container-extra-desktop-width,
       $container-laptop-width
@@ -60,8 +65,9 @@
   --z-index-banner-accent-button: 10;
   --z-index-banner-blue-button: 20;
 
-  --z-index-burger-menu: 1000;
+  --z-index-phone-border: 666;
   --z-index-shadow-body: 999;
+  --z-index-burger-menu: 1000;
 }
 
 .theme-dark {

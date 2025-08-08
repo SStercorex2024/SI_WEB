@@ -3,7 +3,9 @@ export default function (props) {
 
   return (
     <div className="phone">
-      <div className="phone-container">{children}</div>
+      <div className="phone-wrapper">
+        <div className="phone-container">{children}</div>
+      </div>
     </div>
   )
 }

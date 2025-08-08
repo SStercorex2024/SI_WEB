@@ -1,0 +1,50 @@
+.implementation-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blue-gray-second);
+
+  &__title {
+    @include fluid-text(30, 20);
+
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+    align-items: baseline;
+    margin-bottom: fluid(24, 20);
+  }
+
+  &__desc {
+    font-family: var(--font-famity-second);
+    padding: 30px;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-xl);
+    width: fluid(330, 573);
+
+
+    @include mobile-s {
+      padding: 20px 15px;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__pagination-wrapper {
+    padding: 8px 10px;
+    align-items: center;
+    display: flex;
+    column-gap: 30px;
+    background-color: var(--color-blue);
+    border-radius: var(--border-radius-xl);
+  }
+
+  &__our {
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+    line-height: 0.9;
+    padding: 15px 30px;
+  }
+}

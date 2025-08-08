@@ -1,4 +1,5 @@
 import "./ImplementationCard.scss"
+import Icon from "@/components/Icon"
 
 const ImplementationCard = ({ t }) => {
   return (
@@ -8,7 +9,15 @@ const ImplementationCard = ({ t }) => {
         <p>{t.desc}</p>
       </div>
       <div className="implementation-card__extra">
-        <div className="implementation-card__buttons"></div>
+        <div className="implementation-card__pagination-wrapper">
+          <div className="phone-button-next" data-js-slider-prev="">
+            <Icon name="arrow-left-blue" hasFill />
+          </div>
+          <div className="phone-pagination" data-js-slider-pagination=""></div>
+          <div className="phone-button-prev" data-js-slider-next="">
+            <Icon name="arrow-right" hasFill />
+          </div>
+        </div>
         <a href="#contanct" className="implementation-card__our">
           {t.our}
         </a>

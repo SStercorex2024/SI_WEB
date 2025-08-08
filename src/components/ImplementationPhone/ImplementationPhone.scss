@@ -1,0 +1,6 @@
+.implementation-phone {
+
+  @include tablet-above {
+    margin-top: 28px;
+  }
+}

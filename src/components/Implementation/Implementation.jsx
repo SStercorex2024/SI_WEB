@@ -11,14 +11,13 @@ const Implementation = ({ t }) => {
       <h1 className="visually-hidden" id="implementation-section-title">
         {t.titleHidden}
       </h1>
-      <div className="container">
+      <div className="container-plus">
         <h2 className="implementation__title">{t.title}</h2>
-        <div className="implementation__cards">
+        <div className="implementation__cards" data-js-slider-2="">
           {t.items.map((item, index) => (
             <div className="implementation__card" key={index}>
               <ImplementationCard t={item.card} />
               <ImplementationPhone slides={item.slides} />
-              {/*<ImplementationPhone t={{ phone: item.phone }} />*/}
             </div>
           ))}
         </div>

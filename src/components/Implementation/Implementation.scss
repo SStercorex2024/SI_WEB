@@ -1,0 +1,53 @@
+.implementation {
+  padding-block: var(--section-padding-y) calc(var(--section-padding-y) * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    @include fluid-text(40, 30);
+
+    margin-bottom: fluid-to-laptop(40, 20);
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include mobile-above {
+      row-gap: 25px;
+    }
+
+    @include tablet-above {
+      row-gap: 90px;
+    }
+  }
+
+  &__card {
+    height: 360px;
+    position: relative;
+    background-color: var(--color-blue-gray-second);
+    display: flex;
+    border-radius: var(--border-radius-xl);
+    column-gap: fluid-to-laptop(46, 30);
+    row-gap: 10px;
+    padding: fluid(50, 20);
+
+
+    @include mobile-above {
+      height: 473px;
+    }
+
+    @include tablet-above {
+      height: 555px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}
