@@ -17,7 +17,8 @@ const Implementation = ({ t }) => {
           {t.items.map((item, index) => (
             <div className="implementation__card" key={index}>
               <ImplementationCard t={item.card} />
-              <ImplementationPhone t={{ phone: item.phone }} />
+              <ImplementationPhone slides={item.slides} />
+              {/*<ImplementationPhone t={{ phone: item.phone }} />*/}
             </div>
           ))}
         </div>

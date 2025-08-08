@@ -4,6 +4,7 @@ import Banner from "@/sections/Banner"
 import uk from "@/locales/uk"
 import { Head } from "minista"
 import Implementation from "@/components/Implementation"
+import Content from "@/layouts/Content"
 
 export const metadata = {
   title: uk.banner.title,
@@ -48,10 +49,11 @@ export default function UkPage() {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-
       <Header t={uk.header} />
-      <Banner t={uk.banner} />
-      <Implementation t={uk.implementation} />
+      <Content>
+        <Banner t={uk.banner} />
+        <Implementation t={uk.implementation} />
+      </Content>
     </>
   )
 }
