@@ -12,8 +12,7 @@
   justify-content: center;
 
   &-slider {
-
-    //width: 228px !important;
+    // width: 228px !important;
     height: 517px;
     padding-bottom: 90px;
 
@@ -46,7 +45,6 @@
     color: var(--color-light);
     font-weight: 600;
     font-size: 18px;
-
     pointer-events: none;
     user-select: none;
   }
@@ -92,7 +90,7 @@
       }
     }
 
-    //background-image: url("@/assets/images/slide/arrow-right.svg")
+    // background-image: url("@/assets/images/slide/arrow-right.svg")
   }
 
   &-wrapper {
@@ -133,7 +131,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--color-telegtam-1);
-    box-shadow: (0 0.822px 1.438px rgba(0, 0, 0, 0.17));
+    box-shadow: (0 0.822px 1.438px rgb(0 0 0 / 17%));
     border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
   }
 
@@ -142,7 +140,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(0 0 0 / 20%);
     border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
   }
 
@@ -474,7 +472,7 @@
     margin-inline: 10px;
     width: 177px;
     color: var(--color-light);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(0 0 0 / 20%);
     padding-block: 8px;
     border-radius: var(--border-radius-s);
     font-size: 9px;
@@ -547,7 +545,7 @@
     justify-content: space-between;
     padding: 14px 9px 10px;
     border-radius: var(--border-radius-s) var(--border-radius-s) 0 0;
-    box-shadow: 0 0 1.951px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 1.951px 0 rgb(0 0 0 / 15%);
     background-color: var(--color-light);
 
 
@@ -621,7 +619,7 @@
     background-color: var(--color-light);
     border-top: var(--border-one);
     padding: 6px 20px;
-    box-shadow: 0 -0.411px 1.234px 0 rgba(0, 0, 0, 0.13);
+    box-shadow: 0 -0.411px 1.234px 0 rgb(0 0 0 / 13%);
   }
 
   &__footer-menu-btn {
@@ -630,7 +628,6 @@
     justify-content: space-between;
     column-gap: 2px;
     padding: 3px 5px;
-
     background-color: var(--color-telegtam-2);
     border-radius: var(--border-radius-m);
     transition-duration: var(--transition-duration-longer);

@@ -64,6 +64,7 @@
 
     strong {
       @include fluid-text(80, 45);
+
       color: var(--color-blue);
       text-transform: uppercase;
     }

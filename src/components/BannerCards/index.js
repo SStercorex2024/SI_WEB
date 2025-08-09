@@ -1,3 +1,3 @@
-import BannerCards from './BannerCards'
+import BannerCards from "./BannerCards"
 
 export default BannerCards

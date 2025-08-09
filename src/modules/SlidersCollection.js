@@ -93,7 +93,9 @@ class SliderCollection {
         const prevBtn = card.querySelector("[data-js-slider-prev]")
         const swiperContainer = card.querySelector(".phone-slider")
 
-        if (!swiperContainer) return
+        if (!swiperContainer) {
+          return
+        }
 
         new Slider(swiperContainer, {
           modules: [Pagination, Navigation, Autoplay],

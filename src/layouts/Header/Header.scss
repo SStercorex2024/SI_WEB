@@ -51,7 +51,7 @@
       }
 
       .header__button-sublist {
-        padding: 15px 0 0 0;
+        padding: 15px 0 0;
         border-radius: 0;
         top: 0;
         position: relative;
@@ -180,7 +180,7 @@
           opacity: 1;
 
           @include tablet-above {
-            padding: 0 20px 20px 20px;
+            padding: 0 20px 20px;
           }
 
           @include tablet {
@@ -306,7 +306,7 @@
 
         @include tablet {
           left: 0;
-          padding: 0 20px 20px 20px;
+          padding: 0 20px 20px;
         }
 
         @include mobile-above {
@@ -340,13 +340,14 @@
     top: 50px;
 
     @include mobile-above {
-      padding: 0 20px 20px 20px;
+      padding: 0 20px 20px;
     }
   }
 
   &__list-icon,
   &__button-icon {
     transition-duration: var(--transition-duration);
+
     @include square(24px)
   }
 

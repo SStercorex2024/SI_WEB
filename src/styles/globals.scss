@@ -13,17 +13,14 @@ body {
     &::before {
       content: '';
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.35);
+      inset: 0;
+      background: rgb(0 0 0 / 35%);
       z-index: var(--z-index-shadow-body);
       pointer-events: none;
 
 
       @supports not (backdrop-filter: blur(2.5px)) {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgb(0 0 0 / 50%);
       }
     }
 
@@ -31,7 +28,7 @@ body {
     @supports (backdrop-filter: blur(2.5px)) {
       &::before {
         backdrop-filter: blur(2.5px);
-        background: rgba(0, 0, 0, 0.35);
+        background: rgb(0 0 0 / 35%);
       }
     }
   }

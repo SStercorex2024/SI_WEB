@@ -11,14 +11,14 @@
   --color-accent: #6B98F0;
   --color-second: #C3D0E2;
   --color-green: #21AF64;
-  --color-orange: #FF6600;
+  --color-orange: #F60;
   --color-green-bg: #EFFEDD;
 
   --color-hover: var(--color-blue);
-  --color-active: rgba(26, 79, 232, 80%);
+  --color-active: rgb(26 79 232 / 80%);
 
-  --color-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
-  --color-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.10);
+  --color-shadow-hover: 0 8px 16px rgb(0 0 0 / 15%);
+  --color-shadow: 0 3px 12px 0 rgb(0 0 0 / 10%);
   --color-bg-banner: linear-gradient(180deg, #C1CEE1 0%, #D9E3ED 100%);
 
   --color-telegtam-1: #517DA2;
@@ -86,8 +86,8 @@
   --color-green: #35d88a;
 
   --color-hover: var(--color-blue);
-  --color-active: rgba(59, 110, 247, 0.8);
+  --color-active: rgb(59 110 247 / 80%);
 
-  --color-shadow: 0 3px 12px 0 rgba(255, 255, 255, 0.15);
+  --color-shadow: 0 3px 12px 0 rgb(255 255 255 / 15%);
   --color-bg-banner: linear-gradient(180deg, #2e3b4d 0%, #3c4754 100%);
 }

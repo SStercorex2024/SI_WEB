@@ -15,7 +15,9 @@ class OverlayMenu {
     this.burgerMenu = document.querySelector(this.selectors.menu)
     this.body = document.body
 
-    if (!this.burgerButton || !this.burgerMenu) return
+    if (!this.burgerButton || !this.burgerMenu) {
+      return
+    }
 
     this.init()
   }
@@ -53,7 +55,9 @@ class OverlayMenu {
 
   closeAllSublistActives = () => {
     const root = document.querySelector(this.selectors.sublistRoot)
-    if (!root) return
+    if (!root) {
+      return
+    }
 
     root.querySelectorAll(`.${this.stateClasses.isActive}`).forEach((el) => {
       el.classList.remove(this.stateClasses.isActive)

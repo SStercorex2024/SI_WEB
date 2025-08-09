@@ -6,6 +6,7 @@
   .icon {
     width: fluid(230, 140);
     height: fluid(74, 29);
+
     @include hover {
       color: var(--color-hover);
     }
