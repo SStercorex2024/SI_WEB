@@ -14,6 +14,7 @@
       overflow-y: auto;
       border-radius: 0 0 0 var(--border-radius-xl);
       z-index: var(--z-index-burger-menu);
+      overflow-x: hidden;
 
       @include mobile-s {
         min-width: 100vw;
@@ -68,6 +69,7 @@
           width: 100%;
           flex-direction: column;
           row-gap: 20px;
+          margin-right: 0;
         }
       }
 
@@ -98,6 +100,7 @@
     @include laptop {
       flex-wrap: wrap;
       justify-content: center;
+      row-gap: 10px;
     }
 
     @include tablet {
@@ -111,6 +114,8 @@
   }
 
   &__logo-wrapper {
+    display: flex;
+    align-items: center;
     @include laptop {
       justify-content: center;
       width: 100%;
@@ -120,6 +125,23 @@
     @include tablet {
       width: auto;
       margin-bottom: 0;
+    }
+  }
+
+  &__lang-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+  }
+
+  &__lang-link {
+    font-size: 18px;
+    font-family: var(--font-famity-second);
+    font-weight: 500;
+
+    @include hover {
+      color: var(--color-hover);
     }
   }
 
