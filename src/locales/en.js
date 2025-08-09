@@ -136,4 +136,8 @@ export default {
       },
     ],
   },
+  CMR: {
+    title: "CRM and ERP Integration",
+    desc: "We seamlessly integrate all chatbots with your company’s CRM and ERP systems via API services, without disrupting your existing IT infrastructure.",
+  },
 }

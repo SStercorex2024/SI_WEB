@@ -5,6 +5,7 @@ import uk from "@/locales/uk"
 import { Head } from "minista"
 import Implementation from "@/components/Implementation"
 import Content from "@/layouts/Content"
+import CMR from "@/sections/CMR"
 
 export const metadata = {
   title: uk.banner.title,
@@ -53,6 +54,7 @@ export default function UkPage() {
       <Content>
         <Banner t={uk.banner} />
         <Implementation t={uk.implementation} />
+        <CMR t={uk.CMR} />
       </Content>
     </>
   )
