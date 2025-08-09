@@ -1,5 +1,6 @@
 import "./CMR.scss"
 import { Image } from "minista"
+import toKebabCase from "@/constants/toKebabCase"
 
 const CMR = ({ t }) => {
   const cardsImages = [
@@ -16,6 +17,7 @@ const CMR = ({ t }) => {
     <section
       className="cmr-integration"
       aria-labelledby="cmr-integration-title"
+      id={toKebabCase(t.title)}
     >
       <div className="container-plus">
         <h1 className="cmr-integration__title" id="cmr-integration-title">

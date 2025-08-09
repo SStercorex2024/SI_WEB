@@ -6,7 +6,6 @@ import { Head } from "minista"
 import Implementation from "@/components/Implementation"
 import Content from "@/layouts/Content"
 import CMR from "@/sections/CMR"
-import uk from "@/locales/uk"
 
 export const metadata = {
   title: en.banner.title,
