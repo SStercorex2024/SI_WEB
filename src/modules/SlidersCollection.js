@@ -1,11 +1,14 @@
 import Swiper from "swiper"
-import { Autoplay, Pagination } from "swiper/modules"
+import { Autoplay, Pagination, Navigation } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
+import "swiper/css/navigation"
 
 class Slider {
   selectors = {
     pagination: "[data-js-slider-pagination]",
+    nextBtn: "[data-js-slider-next]",
+    prevBtn: "[data-js-slider-prev]",
   }
 
   constructor(rootElement, option = {}) {
@@ -13,14 +16,11 @@ class Slider {
     this.paginationElement = this.rootElement.querySelector(
       this.selectors.pagination,
     )
+    this.nextBtn = this.rootElement.querySelector(this.selectors.nextBtn)
+    this.prevBtn = this.rootElement.querySelector(this.selectors.prevBtn)
 
-    this.option = option
-    this.init()
-  }
-
-  init() {
-    const defaultOption = {
-      modules: [Pagination, Autoplay],
+    this.option = {
+      modules: [Pagination, Autoplay, Navigation],
       loop: true,
       pagination: this.paginationElement
         ? {
@@ -30,18 +30,25 @@ class Slider {
             bulletActiveClass: "slider-bullet-active",
           }
         : false,
+      navigation:
+        this.nextBtn && this.prevBtn
+          ? {
+              nextEl: this.nextBtn,
+              prevEl: this.prevBtn,
+            }
+          : false,
+      ...option,
     }
 
-    const swiperOption = {
-      ...defaultOption,
-      ...this.option,
-    }
+    this.init()
+  }
 
-    const swiper = new Swiper(this.rootElement, swiperOption)
+  init() {
+    this.swiper = new Swiper(this.rootElement, this.option)
 
     setTimeout(() => {
-      swiper.slideTo(0, 0)
-      swiper.update()
+      this.swiper.slideTo(0, 0)
+      this.swiper.update()
     }, 100)
   }
 }
@@ -52,7 +59,10 @@ class SliderCollection {
   }
 
   init() {
-    if (document.readyState === "complete") {
+    if (
+      document.readyState === "complete" ||
+      document.readyState === "interactive"
+    ) {
       this.initializeSliders()
     } else {
       window.addEventListener("DOMContentLoaded", () =>
@@ -77,30 +87,45 @@ class SliderCollection {
 
   initializeHorizontalSliders() {
     document.querySelectorAll("[data-js-slider-2]").forEach((element) => {
-      new Slider(element, {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        direction: "horizontal",
-        spaceBetween: 20,
-        loop: true,
-        speed: 800,
-        slideToClickedSlide: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-        breakpoints: {
-          340: { spaceBetween: 10 },
-          768: { spaceBetween: 15 },
-          1024: { spaceBetween: 20 },
-          1440: { spaceBetween: 30 },
-        },
-        on: {
-          init: function () {
-            this.update()
+      element.querySelectorAll(".implementation__card").forEach((card) => {
+        const pagination = card.querySelector("[data-js-slider-pagination]")
+        const nextBtn = card.querySelector("[data-js-slider-next]")
+        const prevBtn = card.querySelector("[data-js-slider-prev]")
+        const swiperContainer = card.querySelector(".phone-slider")
+
+        if (!swiperContainer) {
+          return
+        }
+
+        new Slider(swiperContainer, {
+          modules: [Pagination, Navigation, Autoplay],
+          watchOverflow: false,
+          slidesPerView: "auto",
+          slidesPerGroup: 1,
+          loop: false,
+          pagination: pagination
+            ? {
+                el: pagination,
+                type: "fraction",
+                clickable: true,
+              }
+            : false,
+          navigation:
+            nextBtn && prevBtn
+              ? {
+                  nextEl: nextBtn,
+                  prevEl: prevBtn,
+                }
+              : false,
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            1024: {
+              spaceBetween: 14,
+            },
           },
-        },
+        })
       })
     })
   }

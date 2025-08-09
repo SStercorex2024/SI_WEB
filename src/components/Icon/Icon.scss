@@ -1,5 +1,5 @@
 .icon {
-  --iconSize: #{fluid-to-laptop(40, 30)};
+  --iconSize: #{fluid(34, 28)};
 
   @include square(var(--iconSize));
 

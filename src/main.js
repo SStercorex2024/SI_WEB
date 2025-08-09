@@ -1,11 +1,11 @@
-import OverlayManu from "@/modules/OverlayManu"
-import SlidersCollection from "@/modules/SlidersCollection"
-import SwapCards from "@/modules/useSwapCards"
-import initScrollProgress from "@/modules/ScrollTop"
+// import initScrollProgress from "@/modules/ScrollTop"
+// initScrollProgress()
+import OverlayMenu from "@/modules/OverlayMenu"
+import OpenSublist from "@/modules/OpenSublist"
+import SliderCollection from "@/modules/SlidersCollection"
 
-initScrollProgress()
-new SwapCards(".questbook__cards")
-new OverlayManu()
+new SliderCollection()
+new OpenSublist()
 document.addEventListener("DOMContentLoaded", () => {
-  new SlidersCollection()
+  new OverlayMenu()
 })

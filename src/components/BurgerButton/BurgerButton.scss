@@ -1,48 +1,50 @@
 .burger-button {
-  @include flex-center(true);
-  @include square(51px);
-
+  display: none;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  background-color: var(--color-accent);
-  border: var(--border-width-m) solid var(--color-black);
-  border-radius: var(--border-radius-m);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius-xs);
+
+  @include square(40px);
+
 
   @include hover {
-    background-color: var(--color-hover);
-    border-color: transparent;
-  }
-
-  &.is-active {
     .burger-button__line {
-      stroke-dasharray: 90 207;
-      stroke-dashoffset: -134;
-
-      &--2 {
-        stroke-dasharray: 1 60;
-        stroke-dashoffset: -30;
-      }
+      stroke: var(--color-accent);
     }
   }
 
-  &:not(.is-active) .burger-button__line--3 {
-    stroke-dasharray: 30 207;
-    stroke-dashoffset: -30;
+  @include tablet {
+    display: inline-flex;
   }
+}
 
-  &__line {
-    fill: none;
-    stroke: var(--color-light);
-    stroke-width: 6;
-    stroke-linecap: round;
-    stroke-dasharray: 60 207;
-    transition:
-      stroke-dasharray var(--transition-duration-longer)
-        cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset var(--transition-duration-longer)
-        cubic-bezier(0.4, 0, 0.2, 1);
+.burger-button.is-active .burger-button__line {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+}
 
-    &--2 {
-      stroke-dasharray: 60 60;
-    }
-  }
+.burger-button.is-active .burger-button__line--2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+}
+
+.burger-button:not(.is-active) .burger-button__line--3 {
+  stroke-dasharray: 60 207;
+}
+
+.burger-button__line {
+  fill: none;
+  stroke: var(--color-gray-2);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 60 207;
+  transition: stroke-dasharray 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-button__line--2 {
+  stroke-dasharray: 60 60;
 }

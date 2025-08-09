@@ -1,0 +1,114 @@
+.banner-card {
+  background-color: var(--color-light);
+  box-shadow: var(--color-shadow);
+  border-radius: var(--border-radius-l);
+  display: flex;
+  flex-direction: column;
+  row-gap: 31px;
+  padding: 24px;
+
+  @include tablet-above {
+    flex-grow: 1;
+    max-height: none;
+    max-width: fluid-to-laptop(466, 300);
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 24px;
+    padding: 27px 20px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  @include hover {
+    box-shadow: var(--color-shadow-hover);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include tablet {
+      row-gap: 10px;
+      align-items: baseline;
+    }
+  }
+
+  &__name-wrapper {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+
+    @include fluid-text(30, 24);
+  }
+
+  &__desc {
+    text-align: left;
+    font-family: var(--font-famity-second);
+  }
+
+  &__info {
+    display: flex;
+    height: 62px;
+    padding-top: 20px;
+    border-top: var(--border-gray);
+
+
+    @include tablet-above {
+      margin-top: auto;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      height: auto;
+      row-gap: 10px;
+      min-width: 300px;
+      margin-left: auto;
+      padding-top: 0;
+      border-top: none;
+      padding-left: fluid-to-laptop(48, 30);
+      border-left: var(--border-gray);
+    }
+
+    @include mobile {
+      min-width: 0  ;
+      width: 100% ;
+      padding-left: 0;
+      border-left: none;
+      padding-top: 15px;
+      border-top: var(--border-gray);
+    }
+  }
+
+  &__label {
+    z-index: var(--z-index-banner-blue-button);
+
+    @include tablet-above {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__price {
+    z-index: var(--z-index-banner-accent-button);
+
+    @include tablet-above {
+      margin-left: -204px;
+      justify-content: right;
+      padding-right: 10px;
+      width: fluid-to-laptop(418, 300);
+    }
+  }
+}

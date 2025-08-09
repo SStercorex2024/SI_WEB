@@ -1,0 +1,67 @@
+.implementation {
+  padding-block: var(--section-padding-y) calc(var(--section-padding-y) * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    padding-block: var(--section-padding-y) calc(var(--section-padding-y) * 12);
+  }
+
+  &__title {
+    @include fluid-text(40, 30);
+
+    margin-bottom: fluid-to-laptop(40, 20);
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include mobile-above {
+      row-gap: 170px;
+    }
+
+    @include tablet-above {
+      row-gap: 120px;
+    }
+
+    @include mobile {
+      row-gap: 170px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--color-blue-gray-second);
+    border-radius: var(--border-radius-xl);
+    gap: 10px fluid-to-laptop(46, 30);
+    padding: fluid(50, 20);
+
+    @include mobile-above {
+      height: 360px;
+    }
+
+    @include tablet-above {
+      height: 433px;
+    }
+
+    @include laptop-above {
+      height: 505px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      height: 760px;
+      justify-content: flex-start;
+    }
+  }
+}
+

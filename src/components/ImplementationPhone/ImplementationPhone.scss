@@ -1,0 +1,10 @@
+.implementation-phone {
+  @include laptop-above {
+    margin-top: 28px;
+  }
+
+  @include mobile {
+    position: absolute;
+    bottom: -130px;
+  }
+}

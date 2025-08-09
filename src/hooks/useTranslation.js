@@ -1,6 +1,10 @@
-import locales from "@/locales"
+import en from "@/locales/en"
+import uk from "@/locales/uk"
 
-export function useTranslation(lang = "en") {
-  const t = locales[lang] || locales["en"]
-  return { t, lang }
+const translations = { en, uk }
+
+const useTranslation = (lang = "en") => {
+  return translations[lang] || translations["en"]
 }
+
+export default useTranslation
