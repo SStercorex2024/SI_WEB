@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
 
+  @include mobile {
+    padding-block: var(--section-padding-y) calc(var(--section-padding-y) * 12);
+  }
+
   &__title {
     @include fluid-text(40, 30);
 
@@ -19,35 +23,46 @@
     row-gap: 20px;
 
     @include mobile-above {
-      row-gap: 25px;
+      row-gap: 170px;
     }
 
     @include tablet-above {
-      row-gap: 90px;
+      row-gap: 120px;
+    }
+
+    @include mobile {
+      row-gap: 170px;
     }
   }
 
   &__card {
-    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     background-color: var(--color-blue-gray-second);
-    display: flex;
     border-radius: var(--border-radius-xl);
     column-gap: fluid-to-laptop(46, 30);
     row-gap: 10px;
     padding: fluid(50, 20);
 
-
     @include mobile-above {
-      height: 473px;
+      height: 360px;
     }
 
     @include tablet-above {
-      height: 555px;
+      height: 433px;
+    }
+
+    @include laptop-above {
+      height: 505px;
     }
 
     @include mobile {
       flex-direction: column;
+      height: 760px;
+      justify-content: flex-start;
     }
   }
 }
+

@@ -1,7 +1,18 @@
 .implementation-card {
+  width: 531px;
+  height: fluid-to-laptop(455, 430);
   display: flex;
   flex-direction: column;
   background-color: var(--color-blue-gray-second);
+
+  @include tablet {
+    width: 573px;
+  }
+
+  @include mobile {
+    width: 100%;
+    align-items: center;
+  }
 
   &__title {
     @include fluid-text(30, 20);
@@ -10,6 +21,10 @@
     font-weight: 600;
     align-items: baseline;
     margin-bottom: fluid(24, 20);
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__desc {
@@ -18,7 +33,15 @@
     background-color: var(--color-light);
     border-radius: var(--border-radius-xl);
     width: fluid(330, 573);
+    transition-duration: var(--transition-duration);
 
+    @include hover {
+      box-shadow: var(--color-shadow-hover);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
 
     @include mobile-s {
       padding: 20px 15px;
@@ -29,7 +52,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: auto;
+
+
+    @include mobile-above {
+      margin-top: auto;
+    }
+
+    @include mobile {
+      margin-top: 15px;
+    }
   }
 
   &__pagination-wrapper {
@@ -39,6 +70,16 @@
     column-gap: 30px;
     background-color: var(--color-blue);
     border-radius: var(--border-radius-xl);
+
+
+    @include mobile {
+      position: absolute;
+      bottom: -150px;
+      z-index: var(--z-index-pagination-buttons);
+      left: 50%;
+      translate: -50% 0;
+      column-gap: 15px;
+    }
   }
 
   &__our {
@@ -46,5 +87,6 @@
     font-weight: 600;
     line-height: 0.9;
     padding: 15px 30px;
+    user-select: none;
   }
 }

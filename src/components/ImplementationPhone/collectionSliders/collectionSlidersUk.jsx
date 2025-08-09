@@ -38,7 +38,7 @@ const SlideUk1 = () => {
               className="phone__body-icon"
             />
             <h3>
-              Ласкаво просимо до Центру <br /> Діагностики Пацієнтів Бота!
+              Ласкаво просимо до Бота <br /> Центру Діагностики Пацієнтів !
             </h3>
           </div>
           <div className="phone__body-content">
@@ -127,7 +127,7 @@ const SlideUk2 = () => {
           <div className="phone__body-text">
             <div className="phone__body-head phone__body-head--laboratory phone__body-head--orange">
               <Icon name="laboratory-second" />
-              <h3>Ласкаво просимо до Центру Діагностики Пацієнтів Бота!</h3>
+              <h3>Ласкаво просимо до Бота Центру Діагностики Пацієнтів !</h3>
             </div>
             <div className="phone__body-content">
               <p className="phone__body-subtitle">

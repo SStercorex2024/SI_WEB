@@ -98,7 +98,8 @@ class SliderCollection {
         new Slider(swiperContainer, {
           modules: [Pagination, Navigation, Autoplay],
           watchOverflow: false,
-          slidesPerView: 1,
+          slidesPerView: "auto",
+          slidesPerGroup: 1,
           loop: false,
           pagination: pagination
             ? {
@@ -118,13 +119,8 @@ class SliderCollection {
             0: {
               slidesPerView: 1,
             },
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 14,
-            },
             1024: {
               spaceBetween: 14,
-              slidesPerView: 3,
             },
           },
         })

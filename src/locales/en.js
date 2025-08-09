@@ -18,9 +18,9 @@ export default {
     ],
     navSubList: [
       "Medical Organizations",
-      "Telecommunication Companies",
+      "Telecommunications Companies",
       "HR Bot for Your Company",
-      "Chat for Selling Tickets at Cultural and Leisure Venues",
+      "Chatbot for Ticket Sales in Cultural and Recreational Venues",
     ],
     extra: {
       label: "More",

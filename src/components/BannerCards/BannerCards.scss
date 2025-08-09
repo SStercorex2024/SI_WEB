@@ -7,13 +7,10 @@
   row-gap: 31px;
   padding: 24px;
 
-  @include laptop {
-  }
-
   @include tablet-above {
     flex-grow: 1;
     max-height: none;
-    width: fluid-to-laptop(466, 300);
+    max-width: fluid-to-laptop(466, 300);
   }
 
   @include tablet {

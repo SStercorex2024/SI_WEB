@@ -13,17 +13,24 @@
 
   &-slider {
 
-    .swiper-wrapper {
-        width: 228px !important;
+    //width: 228px !important;
+    height: 517px;
+    padding-bottom: 90px;
 
-      @include laptop-s-above {
-        width: 480px !important;
-      }
+    @include mobile-above {
+      margin-top: 90px;
+    }
+
+    @include laptop-above {
+      margin-top: 30px;
+    }
+
+    .swiper-wrapper {
+      width: 228px !important;
 
       @include laptop-above {
         width: 722px !important;
       }
-
     }
   }
 
@@ -31,7 +38,7 @@
     flex-shrink: 0;
 
     @include mobile-above {
-      width: auto !important;
+      width: 228px !important;
     }
   }
 
@@ -39,6 +46,9 @@
     color: var(--color-light);
     font-weight: 600;
     font-size: 18px;
+
+    pointer-events: none;
+    user-select: none;
   }
 
   &-button-next {
@@ -634,6 +644,7 @@
     font-size: 9px;
     line-height: 1.1;
     color: var(--color-light);
+    cursor: pointer;
   }
 
   &__footer-ex {
