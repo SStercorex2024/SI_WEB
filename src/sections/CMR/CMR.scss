@@ -22,7 +22,6 @@
     gap: 16px;
 
     @include mobile {
-      grid-template-columns: 60px 60px 60px 83px;
       grid-template-rows: minmax(71px, auto) repeat(2, minmax(60px, auto)) minmax(154px, auto);
       gap: 10px;
     }

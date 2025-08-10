@@ -140,4 +140,21 @@ export default {
     title: "CRM and ERP Integration",
     desc: "We seamlessly integrate all chatbots with your company’s CRM and ERP systems via API services, without disrupting your existing IT infrastructure.",
   },
+  contact: {
+    title: "Submit a request for Bot development",
+    desc: "Leave your email and get a 5% discount for the first 3 months of using our services",
+    inputLabelName: "Name",
+    inputName: "Maria",
+    inputLabelPhone: "Phone",
+    inputPhone: "+44",
+    selectLabel: "Bot implementation area",
+    select: [
+      "Bot development",
+      "Telecommunication companies",
+      "HR bot for your company",
+      "Chat for selling tickets to cultural and entertainment events",
+    ],
+    politic: `By submitting a request, you accept the <a href="/offer-agreement" target="_blank">terms of the offer agreement</a> and consent to the processing of your personal data in accordance with the <a href="/privacy-policy" target="_blank">privacy policy</a>`,
+    send: "Send",
+  },
 }

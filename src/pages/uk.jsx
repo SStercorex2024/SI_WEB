@@ -6,6 +6,7 @@ import { Head } from "minista"
 import Implementation from "@/components/Implementation"
 import Content from "@/layouts/Content"
 import CMR from "@/sections/CMR"
+import Contact from "@/sections/Contact"
 
 export const metadata = {
   title: uk.banner.title,
@@ -55,6 +56,7 @@ export default function UkPage() {
         <Banner t={uk.banner} />
         <Implementation t={uk.implementation} />
         <CMR t={uk.CMR} />
+        <Contact t={uk.contact} />
       </Content>
     </>
   )

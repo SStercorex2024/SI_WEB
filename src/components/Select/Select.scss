@@ -1,0 +1,112 @@
+.icon_select_mate {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  transition: all 275ms;
+  transform-origin: center center;
+
+
+  svg {
+    width: 14px;
+    height: 8px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.select_mate {
+  position: relative;
+  float: left;
+  outline: 2px solid var(--color-second);
+  outline-offset: -2px;
+  width: 100%;
+  padding-inline: 10px;
+  color: var(--color-dark);
+  font-family: var(--font-famity-second);
+  background-color: var(--color-light);
+  font-weight: 600;
+  font-size: 14px;
+  height: 44px;
+  border-radius: var(--border-radius-m);
+  transition-duration: var(--transition-duration);
+  margin-bottom: 15px;
+  /* Oculto el elemento select */
+  select {
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    z-index: var(--z-index-select-mate);
+  }
+}
+
+.cont_list_select_mate {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.cont_select_int {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: var(--z-index-select-init);
+  overflow: hidden;
+  height: 0;
+  width: calc(100% + 20px);
+  background-color: #fff;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
+  transition: all 375ms ease-in-out;
+  margin-left: -10px;
+  border-radius: var(--border-radius-m);
+
+
+  li {
+    position: relative;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid var(--color-dark);
+    background-color: var(--color-light-2);
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    transition: all 275ms ease-in-out;
+    display: block;
+    cursor: pointer;
+
+    &:last-child {
+      border-radius: 3px;
+      border-bottom: 0;
+    }
+
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+
+  .active {
+    background-color: var(--color-gray-2);
+  }
+}
+
+
+.select__label {
+  font-family: var(--font-famity-second);
+  color: var(--color-light);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.selecionado_opcion {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
