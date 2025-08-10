@@ -43,7 +43,7 @@ const Header = ({ t }) => {
                           <span>{item}</span>
                           <Icon
                             className="header__list-icon"
-                            name="arrow-down"
+                            name="arrow-down-black"
                             hasFill
                           />
                         </button>
@@ -90,7 +90,7 @@ const Header = ({ t }) => {
               >
                 <Icon
                   className="header__button-icon"
-                  name="arrow-down"
+                  name="arrow-down-black"
                   hasFill
                 />
                 <span className="header__button-label">{t.extra.label}</span>

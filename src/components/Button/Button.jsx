@@ -12,6 +12,7 @@ const Button = (props) => {
      *  '' default | 'accent' | 'with-dot' | 'blue'
      */
     mode = "",
+
     label,
     isLabelHidden = false,
     iconName,
