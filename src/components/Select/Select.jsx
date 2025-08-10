@@ -23,7 +23,7 @@ const Select = ({ t }) => {
         </select>
         <p className="selecionado_opcion" />
         <span className="icon_select_mate">
-          <Icon name="arrow-down" hasFill/>
+          <Icon name="arrow-down" hasFill />
         </span>
         <div className="cont_list_select_mate">
           <ul className="cont_select_int" />
