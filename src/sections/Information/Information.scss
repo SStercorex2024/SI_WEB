@@ -17,7 +17,7 @@
 
     @include mobile {
       align-items: center;
-      padding: 30px 30px 100px 30px;
+      padding: 30px 30px 100px;
       margin-bottom: 10px;
     }
   }
@@ -96,6 +96,7 @@
 
   &__subdesc {
     @include fluid-text(20, 16);
+
     font-family: var(--font-famity-second);
 
     big {
@@ -141,11 +142,13 @@
 
   &__copyright {
     position: absolute;
+    margin-inline: auto;
+    padding-inline: 10px;
     bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
 
     @include mobile {
       flex-direction: column;

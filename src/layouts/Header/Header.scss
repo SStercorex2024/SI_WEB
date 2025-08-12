@@ -11,10 +11,9 @@
       right: 0;
       top: 0;
       height: 100%;
-      overflow-y: auto;
+      overflow: hidden auto;
       border-radius: 0 0 0 var(--border-radius-xl);
       z-index: var(--z-index-burger-menu);
-      overflow-x: hidden;
 
       @include mobile-s {
         min-width: 100vw;
@@ -44,7 +43,7 @@
       }
 
       .header__button-extra {
-        width: 100%;
+        width: 80%;
       }
 
       ul.header__sublist {
@@ -69,7 +68,6 @@
           width: 100%;
           flex-direction: column;
           row-gap: 20px;
-          margin-right: 0;
         }
       }
 
@@ -106,7 +104,6 @@
 
     @include tablet {
       justify-content: space-around;
-      flex-wrap: nowrap;
     }
 
     @include mobile {
@@ -117,6 +114,7 @@
   &__logo-wrapper {
     display: flex;
     align-items: center;
+
     @include laptop {
       justify-content: center;
       width: 100%;
@@ -220,6 +218,7 @@
     font-family: var(--font-famity-second);
     font-size: 18px;
     font-weight: 600;
+    color: var(--color-dark);
     border: none;
     background-color: transparent;
     display: flex;
@@ -267,11 +266,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    column-gap: fluid-to-laptop(10, 4);
-
-    @include tablet {
-      margin-right: fluid-to-laptop(55, 45);
-    }
+    column-gap: fluid-to-laptop(20, 10);
 
     @include mobile-s {
       display: none;
@@ -345,6 +340,10 @@
     @include tablet-above {
       width: 63px;
     }
+  }
+
+  &__button {
+    color: var(--color-dark);
   }
 
   &__sublist,

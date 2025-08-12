@@ -46,19 +46,6 @@
     padding: fluid(50, 20);
     height: fluid-to-laptop(455, 430);
 
-
-    //@include laptop-above {
-    //  height: 505px;
-    //}
-    //@include mobile-above {
-    //  height: 360px;
-    //}
-    //
-    //@include tablet-above {
-    //  height: 433px;
-    //}
-
-
     @include mobile {
       flex-direction: column;
       height: 875px;

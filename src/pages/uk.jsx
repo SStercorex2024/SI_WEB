@@ -9,6 +9,8 @@ import CMR from "@/sections/CMR"
 import Contact from "@/sections/Contact"
 import Our from "@/sections/Our"
 import Information from "@/sections/Information"
+import FooterBg from "@/components/FooterBg"
+import ScrollProgress from "@/components/ScrollProgress"
 
 export const metadata = {
   title: uk.banner.title,
@@ -55,12 +57,14 @@ export default function UkPage() {
       </Head>
       <Header t={uk.header} />
       <Content>
+        <ScrollProgress />
         <Banner t={uk.banner} />
         <Implementation t={uk.implementation} />
         <CMR t={uk.CMR} />
         <Contact t={uk.contact} />
         <Our t={uk.ourJobs} />
         <Information t={uk.information} />
+        <FooterBg />
       </Content>
     </>
   )

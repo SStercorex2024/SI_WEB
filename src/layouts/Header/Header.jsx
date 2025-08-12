@@ -5,6 +5,7 @@ import Button from "@/components/Button"
 import BurgerButton from "@/components/BurgerButton"
 import classNames from "classnames"
 import Icon from "@/components/Icon"
+import ToggleTheme from "@/components/ToggleTheme"
 
 const Header = ({ t }) => {
   return (
@@ -123,6 +124,7 @@ const Header = ({ t }) => {
                 UA
               </a>
             </div>
+            <ToggleTheme />
           </div>
         </div>
       </div>

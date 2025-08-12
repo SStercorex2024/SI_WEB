@@ -9,6 +9,8 @@ import CMR from "@/sections/CMR"
 import Contact from "@/sections/Contact"
 import Our from "@/sections/Our"
 import Information from "@/sections/Information"
+import FooterBg from "@/components/FooterBg"
+import ScrollProgress from "@/components/ScrollProgress"
 
 export const metadata = {
   title: en.banner.title,
@@ -56,12 +58,14 @@ export default function EnPage() {
 
       <Header t={en.header} />
       <Content>
+        <ScrollProgress />
         <Banner t={en.banner} />
         <Implementation t={en.implementation} />
         <CMR t={en.CMR} />
         <Contact t={en.contact} />
         <Our t={en.ourJobs} />
         <Information t={en.information} />
+        <FooterBg />
       </Content>
     </>
   )

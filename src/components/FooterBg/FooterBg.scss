@@ -1,0 +1,8 @@
+.footer-bg {
+  padding-block: var(--section-padding-y);
+
+  &__image {
+    width: 100%;
+    height: fluid(302, 75);
+  }
+}
