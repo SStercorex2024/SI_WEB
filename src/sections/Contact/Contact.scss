@@ -44,6 +44,7 @@
 
   &__title {
     @include fluid-text(40, 30);
+
     font-family: var(--font-famity-second);
     font-weight: 600;
     color: var(--color-light);
@@ -56,6 +57,7 @@
 
   &__desc {
     @include fluid-text(20, 18);
+
     font-family: var(--font-famity-second);
     font-weight: 600;
     line-height: 1.2;
@@ -147,10 +149,10 @@
       }
     }
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
       visibility: hidden;
 
-      &:checked + label:after {
+      &:checked + label::after {
         opacity: 1;
       }
     }

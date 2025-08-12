@@ -1,0 +1,53 @@
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition-duration: var(--transition-duration);
+  background-color: var(--color-gray-3);
+  border-radius: var(--border-radius-m);
+  border: 2px solid var(--color-accent);
+
+
+  @include hover {
+  }
+
+  .theme-light {
+    color: var(--color-dark);
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+
+    @include hover {
+      scale: 0.98;
+      color: var(--color-blue);
+    }
+  }
+
+  .theme-dark {
+    color: var(--color-accent);
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    @include hover {
+      scale: 0.98;
+      color: var(--color-blue);
+    }
+  }
+
+  &.is-dark {
+    .theme-light {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+
+    .theme-dark {
+      width: 24px;
+      height: 24px;
+      opacity: 1;
+    }
+  }
+}

@@ -19,7 +19,7 @@ const initScrollProgress = () => {
       scrollProgress.style.display = "none"
     }
 
-    scrollProgress.style.background = `conic-gradient(#D3AD7F ${scrollValue}%, #7c7777 ${scrollValue}%)`
+    scrollProgress.style.background = `conic-gradient(#6B98F0 ${scrollValue}%, #bdcae0 ${scrollValue}%)`
   }
 
   scrollProgress.addEventListener("click", () => {

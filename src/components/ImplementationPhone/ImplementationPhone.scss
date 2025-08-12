@@ -1,10 +1,19 @@
 .implementation-phone {
+  overflow: hidden;
+
   @include laptop-above {
+    margin-left: auto;
+    width: 722px;
     margin-top: 28px;
   }
 
   @include mobile {
     position: absolute;
-    bottom: -130px;
+    bottom: -40px;
+  }
+
+  @include mobile-s {
+    height: 466ppx;
+    bottom: -40px;
   }
 }

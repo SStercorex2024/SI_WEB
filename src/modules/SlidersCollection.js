@@ -99,6 +99,7 @@ class SliderCollection {
 
         new Slider(swiperContainer, {
           modules: [Pagination, Navigation, Autoplay],
+          direction: "horizontal",
           watchOverflow: false,
           slidesPerView: "auto",
           slidesPerGroup: 1,

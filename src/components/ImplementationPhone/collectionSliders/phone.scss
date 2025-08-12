@@ -12,7 +12,6 @@
   justify-content: center;
 
   &-slider {
-    // width: 228px !important;
     height: 517px;
     padding-bottom: 90px;
 
@@ -27,6 +26,10 @@
     .swiper-wrapper {
       width: 228px !important;
 
+      display: flex !important;
+      flex-direction: row !important; /* очень важно */
+      transition-property: transform !important;
+
       @include laptop-above {
         width: 722px !important;
       }
@@ -35,10 +38,6 @@
 
   &-slide {
     flex-shrink: 0;
-
-    @include mobile-above {
-      width: 228px !important;
-    }
   }
 
   &-pagination {
@@ -89,8 +88,6 @@
         scale: 0.9;
       }
     }
-
-    // background-image: url("@/assets/images/slide/arrow-right.svg")
   }
 
   &-wrapper {
@@ -546,7 +543,7 @@
     padding: 14px 9px 10px;
     border-radius: var(--border-radius-s) var(--border-radius-s) 0 0;
     box-shadow: 0 0 1.951px 0 rgb(0 0 0 / 15%);
-    background-color: var(--color-light);
+    background-color: var(--color-telegtam-1);
 
 
     &::before {
