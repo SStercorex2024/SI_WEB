@@ -1,7 +1,5 @@
 import "./LanguageSwitcher.scss"
 import { Link } from "minista"
-// import uk from "@/locales"
-// import en from "@/locales"
 
 const LanguageSwitcher = ({ currentLang }) => {
   return (

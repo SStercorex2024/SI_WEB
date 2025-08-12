@@ -12,7 +12,6 @@
   justify-content: center;
 
   &-slider {
-    // width: 228px !important;
     height: 517px;
     padding-bottom: 90px;
 
@@ -27,6 +26,10 @@
     .swiper-wrapper {
       width: 228px !important;
 
+      display: flex !important;
+      flex-direction: row !important; /* очень важно */
+      transition-property: transform !important;
+
       @include laptop-above {
         width: 722px !important;
       }
@@ -35,10 +38,6 @@
 
   &-slide {
     flex-shrink: 0;
-
-    @include mobile-above {
-      width: 228px !important;
-    }
   }
 
   &-pagination {
@@ -89,8 +88,6 @@
         scale: 0.9;
       }
     }
-
-    // background-image: url("@/assets/images/slide/arrow-right.svg")
   }
 
   &-wrapper {

@@ -95,7 +95,7 @@ const Information = ({ t }) => {
           </div>
           <span className="information__extra">{t.extra}</span>
         </div>
-        <div className="information__copyright">
+        <div className="information__copyright container-plus">
           <a href="#" className="information__copyright-link">
             {t.copyright.link}
           </a>

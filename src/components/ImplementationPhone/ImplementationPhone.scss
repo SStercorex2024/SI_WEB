@@ -1,4 +1,6 @@
 .implementation-phone {
+  overflow: hidden;
+
   @include laptop-above {
     margin-left: auto;
     width: 722px;
