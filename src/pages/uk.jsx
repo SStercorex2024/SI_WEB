@@ -7,6 +7,7 @@ import Implementation from "@/components/Implementation"
 import Content from "@/layouts/Content"
 import CMR from "@/sections/CMR"
 import Contact from "@/sections/Contact"
+import Our from "@/sections/Our"
 
 export const metadata = {
   title: uk.banner.title,
@@ -57,6 +58,7 @@ export default function UkPage() {
         <Implementation t={uk.implementation} />
         <CMR t={uk.CMR} />
         <Contact t={uk.contact} />
+        <Our t={uk.ourJobs} />
       </Content>
     </>
   )

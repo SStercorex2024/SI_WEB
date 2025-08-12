@@ -1,0 +1,42 @@
+.our {
+  padding-block: var(--section-padding-y);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    padding: 46px 10px;
+    background-color: var(--color-blue-gray-second);
+    border-radius: var(--border-radius-xl);
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    @include fluid-text(40, 30);
+
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+  }
+
+  &__link {
+    @include fluid-text(23, 18);
+
+    font-family: var(--font-famity-second);
+    font-weight: 600;
+    color: var(--color-blue);
+    padding: fluid(26, 12) fluid(33, 27);
+    border: 1px solid var(--color-blue);
+    border-radius: var(--border-radius-xl);
+
+    @include hover {
+      color: var(--color-light);
+      border-color: var(--color-light-2);
+    }
+  }
+}

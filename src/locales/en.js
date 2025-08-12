@@ -157,4 +157,8 @@ export default {
     politic: `By submitting a request, you accept the <a href="/offer-agreement" target="_blank">terms of the offer agreement</a> and consent to the processing of your personal data in accordance with the <a href="/privacy-policy" target="_blank">privacy policy</a>`,
     send: "Send",
   },
+  ourJobs: {
+    title: "We also create websites!",
+    link: "Go to si-web.com and see our work",
+  },
 }

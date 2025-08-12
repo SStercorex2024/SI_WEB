@@ -42,7 +42,7 @@
     position: relative;
     background-color: var(--color-blue-gray-second);
     border-radius: var(--border-radius-xl);
-    gap: 10px fluid-to-laptop(46, 30);
+    gap: fluid-to-laptop(46, 30);
     padding: fluid(50, 20);
 
     @include mobile-above {

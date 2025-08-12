@@ -154,4 +154,8 @@ export default {
     politic: `Надсилаючи заявку, ви приймаєте <a href="/dogovir-oferty" target="_blank">умови договору оферти</a> та даєте згоду на обробку своїх персональних даних відповідно до <a href="/polityka-konfidentsiynosti" target="_blank">політики конфіденційності</a>`,
     send: "Надіслати",
   },
+  ourJobs: {
+    title: "Ми також створюємо сайти!",
+    link: "Перейти на si-web.com та переглянути наші роботи",
+  },
 }

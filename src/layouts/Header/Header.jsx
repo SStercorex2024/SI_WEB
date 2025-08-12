@@ -120,7 +120,7 @@ const Header = ({ t }) => {
               </a>
               /
               <a href="/uk" className="header__lang-link">
-                UK
+                UA
               </a>
             </div>
           </div>

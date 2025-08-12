@@ -1,5 +1,7 @@
 .implementation-phone {
   @include laptop-above {
+    margin-left: auto;
+    width: 722px;
     margin-top: 28px;
   }
 
