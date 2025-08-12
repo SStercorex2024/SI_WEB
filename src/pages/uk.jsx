@@ -8,6 +8,7 @@ import Content from "@/layouts/Content"
 import CMR from "@/sections/CMR"
 import Contact from "@/sections/Contact"
 import Our from "@/sections/Our"
+import Information from "@/sections/Information"
 
 export const metadata = {
   title: uk.banner.title,
@@ -59,6 +60,7 @@ export default function UkPage() {
         <CMR t={uk.CMR} />
         <Contact t={uk.contact} />
         <Our t={uk.ourJobs} />
+        <Information t={uk.information} />
       </Content>
     </>
   )

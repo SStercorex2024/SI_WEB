@@ -1,6 +1,5 @@
 .implementation-card {
   width: 531px;
-  height: fluid-to-laptop(455, 430);
   display: flex;
   flex-direction: column;
   background-color: var(--color-blue-gray-second);
@@ -32,7 +31,6 @@
     padding: 30px;
     background-color: var(--color-light);
     border-radius: var(--border-radius-xl);
-    width: fluid(330, 573);
     transition-duration: var(--transition-duration);
 
     @include hover {
@@ -40,7 +38,8 @@
     }
 
     @include mobile {
-      width: 100%;
+      width: 360px;
+      overflow-y: auto;
     }
 
     @include mobile-s {
@@ -88,5 +87,6 @@
     line-height: 0.9;
     padding: 15px 30px;
     user-select: none;
+    z-index: var(--z-index-implementation-btn);
   }
 }

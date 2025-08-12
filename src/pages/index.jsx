@@ -8,6 +8,7 @@ import Content from "@/layouts/Content"
 import CMR from "@/sections/CMR"
 import Contact from "@/sections/Contact"
 import Our from "@/sections/Our"
+import Information from "@/sections/Information"
 
 export const metadata = {
   title: en.banner.title,
@@ -60,6 +61,7 @@ export default function EnPage() {
         <CMR t={en.CMR} />
         <Contact t={en.contact} />
         <Our t={en.ourJobs} />
+        <Information t={en.information} />
       </Content>
     </>
   )

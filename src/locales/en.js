@@ -161,4 +161,24 @@ export default {
     title: "We also create websites!",
     link: "Go to si-web.com and see our work",
   },
+  information: {
+    title: "Contact Information",
+    link: "SI-WEB.com",
+    phone: "+38 (067) 123-45-67",
+    telegram: "tg: sw_robot",
+    email: "info@si-web.com",
+    owner: {
+      name: "Private Entrepreneur Serhii Sereda",
+      desc: "EDRPOU 324547600120391, TIN 544590071833",
+    },
+    address: {
+      label: "Legal and actual address:",
+      addressFact: "Zhmykhiv, Prospekt St., 24, office 207",
+    },
+    extra: "16 YEARS OF WORK — 16 YEARS OF EXPERIENCE",
+    copyright: {
+      link: "Personal Data Processing Policy",
+      label: "Copyright © 2025 SI-Web IT Company",
+    },
+  },
 }

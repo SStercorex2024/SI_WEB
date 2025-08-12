@@ -75,6 +75,7 @@
 
       .header__buttons-sublist {
         width: 100%;
+        display: flex;
       }
 
       .header__buttons {
@@ -335,6 +336,10 @@
         @include mobile-above {
         }
       }
+    }
+
+    @include mobile {
+      display: none;
     }
 
     @include tablet-above {
