@@ -1,4 +1,4 @@
-### 🛠️ Stac 
+ 🛠️ stack
 
 JavaScript Sass Vite Figma Minista
 
